@@ -15,13 +15,15 @@ local M = {}
 M.get_color = gcol
 M.get_current_mode = gcurmod
 
-M.__c = color.colors(gcurmod())
+__c = color.colors(gcurmod())
 
 ---Configure theme and install theme into instance
 M.setup = function()
   vim.g.colors_name = "clrtheme"
+  vim.cmd("hi clear")
+  vim.cmd("syntax reset")
   ---@type table
-  local g = require("groups").load(M.__c)
+  local g = require("groups").load(__c)
 
   for k, v in pairs(g) do
     vim.api.nvim_set_hl(0, k, v)
