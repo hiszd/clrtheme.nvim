@@ -174,6 +174,10 @@ M.colors = function(m)
     ["TSParameter"] = COLORS[m]["fg"],
     ["TSKeywordOperator"] = COLORS[m]["yellow"],
     ["blue2"] = COLORS[m]["blue2"],
+    ["normal"] = COLORS[m]["normal"],
+    ["visual"] = COLORS[m]["visual"],
+    ["insert"] = COLORS[m]["insert"],
+    ["command"] = COLORS[m]["command"],
   }
   return c
 end

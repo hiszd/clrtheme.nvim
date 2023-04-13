@@ -8,7 +8,7 @@ local gcurmod = function()
 end
 
 local M = {}
-M.get_color = require("clrtheme.color").gcol
+M.color = require("clrtheme.color")
 M.get_current_mode = gcurmod
 
 M.__z = require("clrtheme.color").colors(gcurmod())
@@ -32,16 +32,16 @@ end
 
 function M.load_feline()
   local theme = {
-    red = M.get_color("red"),
-    green = M.get_color("green"),
-    blue = M.get_color("blue"),
-    gray = M.get_color("bg"),
-    fg = M.get_color("linefg"),
-    bg = M.get_color("linebg"),
-    n = M.get_color("normal"),
-    v = M.get_color("visual"),
-    i = M.get_color("insert"),
-    c = M.get_color("command"),
+    red = M.color.gcol("red"),
+    green = M.color.gcol("green"),
+    blue = M.color.gcol("blue"),
+    gray = M.color.gcol("bg"),
+    fg = M.color.gcol("linefg"),
+    bg = M.color.gcol("linebg"),
+    n = M.color.gcol("normal"),
+    v = M.color.gcol("visual"),
+    i = M.color.gcol("insert"),
+    c = M.color.gcol("command"),
   }
   require("feline").use_theme(theme)
 end
@@ -49,35 +49,35 @@ end
 function M.lualine_theme()
   return {
     normal = {
-      a = { bg = M.get_color("green"), fg = M.get_color("fg"), gui = "bold" },
-      b = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
-      c = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
-      z = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
+      a = { bg = M.color.gcol("green"), fg = M.color.gcol("fg"), gui = "bold" },
+      b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
+      c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
+      z = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     insert = {
-      a = { bg = M.get_color("linebg"), fg = M.get_color("fg"), gui = "bold" },
-      b = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
-      c = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
+      c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     visual = {
-      a = { bg = M.get_color("linebg"), fg = M.get_color("fg"), gui = "bold" },
-      b = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
-      c = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
+      c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     replace = {
-      a = { bg = M.get_color("linebg"), fg = M.get_color("fg"), gui = "bold" },
-      b = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
-      c = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
+      c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     command = {
-      a = { bg = M.get_color("linebg"), fg = M.get_color("fg"), gui = "bold" },
-      b = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
-      c = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
+      c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     inactive = {
-      a = { bg = M.get_color("linebg"), fg = M.get_color("fg"), gui = "bold" },
-      b = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
-      c = { bg = M.get_color("linebg"), fg = M.get_color("fg") },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
+      c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
   }
 end
@@ -87,11 +87,11 @@ function M.load_lualine()
 end
 
 function M.bufferline_highlights()
-  local norm_bg = M.get_color("bg")
-  local norm_fg = M.get_color("fg")
-  local comment_fg = M.get_color("comments")
-  local black = M.get_color("black")
-  local visible = M.get_color("dark_gray")
+  local norm_bg = M.color.gcol("bg")
+  local norm_fg = M.color.gcol("fg")
+  local comment_fg = M.color.gcol("comments")
+  local black = M.color.gcol("black")
+  local visible = M.color.gcol("dark_gray")
 
   -- The backdrop color
   local backdrop = black
