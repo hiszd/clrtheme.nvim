@@ -49,28 +49,28 @@ end
 function M.lualine_theme()
   return {
     normal = {
-      a = { bg = M.color.gcol("green"), fg = M.color.gcol("fg"), gui = "bold" },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("normal"), gui = "bold" },
       b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
       c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
       z = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     insert = {
-      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("insert"), gui = "bold" },
       b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
       c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     visual = {
-      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("visual"), gui = "bold" },
       b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
       c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     replace = {
-      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("replace"), gui = "bold" },
       b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
       c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
     command = {
-      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg"), gui = "bold" },
+      a = { bg = M.color.gcol("linebg"), fg = M.color.gcol("command"), gui = "bold" },
       b = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
       c = { bg = M.color.gcol("linebg"), fg = M.color.gcol("fg") },
     },
